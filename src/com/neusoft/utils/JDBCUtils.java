@@ -1,4 +1,4 @@
-package com.neusoft.jdbc.studentAdmin.utils;
+package com.neusoft.utils;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
@@ -10,10 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-/**
- * @author Eric Lee
- * @date 2020/8/6 09:54
- */
 public class JDBCUtils {
     private static DataSource ds;
 
