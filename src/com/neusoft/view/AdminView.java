@@ -1,4 +1,8 @@
 package com.neusoft.view;
 
-public class AdminView {
+import com.neusoft.domain.Admin;
+
+public interface AdminView {
+    //登录
+    public Admin login();
 }

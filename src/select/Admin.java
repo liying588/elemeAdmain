@@ -1,5 +1,4 @@
-
-package com.neusoft.domain;
+package select;
 
 public class Admin {
     private Integer adminId;

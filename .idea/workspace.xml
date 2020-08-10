@@ -28,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,21 +54,25 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neusoft.utils" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java9\elemeAdmain\src" />
       <recent name="D:\Java9\elemeAdmain\libs" />
       <recent name="D:\Java9\elemeAdmain" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.neusoft.Main" />
+  <component name="RunManager" selected="Application.ElmAdmin">
+    <configuration name="ElmAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.ElmAdmin" />
       <module name="elemeAdmain" />
       <extension name="coverage">
         <pattern>
@@ -79,8 +84,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JDBCAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="select.domain.JDBCAdmin" />
+      <module name="elemeAdmain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="select.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.Main" />
+      <module name="elemeAdmain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neusoft.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.test.TestAdmin" />
+      <module name="elemeAdmain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neusoft.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBusiness" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.test.TestBusiness" />
+      <module name="elemeAdmain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neusoft.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ElmAdmin" />
+        <item itemvalue="Application.TestBusiness" />
+        <item itemvalue="Application.TestAdmin" />
+        <item itemvalue="Application.JDBCAdmin" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -96,7 +157,9 @@
       <option name="presentableId" value="Default" />
       <updated>1596769947143</updated>
       <workItem from="1596769963546" duration="2613000" />
-      <workItem from="1596779467098" duration="884000" />
+      <workItem from="1596779467098" duration="14567000" />
+      <workItem from="1596847988269" duration="5102000" />
+      <workItem from="1596948014133" duration="17693000" />
     </task>
     <servers />
   </component>
@@ -120,29 +183,57 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1596770041109" />
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1596780197359">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1596966251323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596780197359" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1596770817806">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596966251323" />
+    <state x="523" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1596962708109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596770817806" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1596770817805">
+    <state x="523" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1366.728@0.0.1366.728" timestamp="1596962708109" />
+    <state x="437" y="268" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596966358974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596770817805" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1596770817802">
+    <state x="437" y="268" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1596966358974" />
+    <state width="1323" height="470" key="GridCell.Tab.0.bottom" timestamp="1596967038617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596770817802" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1596770817806">
+    <state width="1323" height="470" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596967038617" />
+    <state width="1323" height="470" key="GridCell.Tab.0.center" timestamp="1596967038616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596770817806" />
+    <state width="1323" height="470" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596967038616" />
+    <state width="1323" height="470" key="GridCell.Tab.0.left" timestamp="1596967038615">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596967038615" />
+    <state width="1323" height="470" key="GridCell.Tab.0.right" timestamp="1596967038616">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596967038616" />
+    <state width="1323" height="470" key="GridCell.Tab.1.bottom" timestamp="1596967038619">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596967038619" />
+    <state width="1323" height="470" key="GridCell.Tab.1.center" timestamp="1596967038618">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596967038618" />
+    <state width="1323" height="470" key="GridCell.Tab.1.left" timestamp="1596967038618">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596967038618" />
+    <state width="1323" height="470" key="GridCell.Tab.1.right" timestamp="1596967038618">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="470" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596967038618" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1596780378724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596780378724" />
+    <state x="582" y="175" key="run.anything.popup" timestamp="1596959459445">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="582" y="175" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596959459445" />
   </component>
 </project>
