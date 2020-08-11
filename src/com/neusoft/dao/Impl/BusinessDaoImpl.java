@@ -11,10 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Eric Lee
- * @date 2020/8/7 14:52
- */
 public class BusinessDaoImpl implements BusinessDao {
     private Connection conn =null;
     private PreparedStatement pstmt =null;
@@ -83,4 +79,153 @@ public class BusinessDaoImpl implements BusinessDao {
         }
         return businessId;
     }
+
+    @Override
+    public Business getBusinessByNameByPass(Integer businessId, String password) {
+        Business business=null;
+        String sql="select * from business where businessId = ? and password = ?";
+        try {
+            conn=JDBCUtils.getConnection();
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setInt(1, businessId);
+            pstmt.setString(2,password);
+            rs=pstmt.executeQuery();
+            while (rs.next()){
+                business=new Business();
+                business.setBusinessId(rs.getInt("businessId"));
+                business.setPassword(rs.getString("password"));
+                //todo
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return business;
+    }
+
+    @Override
+    public int removeBusiness(int businessId) {
+        int result=0;
+        String sql="delete from business where businessId=?";
+
+        try {
+            conn=JDBCUtils.getConnection();
+            //手动开启事物
+            conn.setAutoCommit(false);
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setInt(1,businessId);
+            result=pstmt.executeUpdate();
+            conn.commit();
+        } catch (SQLException throwables) {
+            result=0;
+            try {
+                conn.rollback();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return result;
+
+    }
+
+    @Override
+    public Business getBusinessByBusinessId(Integer businessId) {
+        Business business=null;
+        String sql="select * from business where businessId = ? ";
+        try {
+            conn=JDBCUtils.getConnection();
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setInt(1,businessId);
+            rs=pstmt.executeQuery();
+            while (rs.next()){
+                business= new Business();
+                business.setBusinessId(rs.getInt("businessId"));
+                business.setPassword(rs.getString("password"));
+                business.setBusinessName(rs.getString("businessName"));
+                business.setBusinessAddress(rs.getString("businessAddress"));
+                business.setBusinessExplain(rs.getString("businessExplain"));
+                business.setStartPrice(rs.getDouble("starPrice"));
+                business.setDeliveryPrice(rs.getDouble("deliveryprice"));
+
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return business;
+    }
+
+    @Override
+    public int updateBusiness(Business business) {
+        int result = 0;
+        String sql="update business set businessName = ?,businessAddress =?,businessExplain=?,starPrice=?,deliveryPrice=? where businessId = ? ";
+        try {
+            conn=JDBCUtils.getConnection();
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setInt(1,business.getBusinessId());
+            pstmt.setString(2,business.getBusinessExplain());
+            pstmt.setString(2,business.getBusinessAddress());
+            pstmt.setString(2,business.getBusinessName());
+            pstmt.setDouble(2,business.getStartPrice());
+            pstmt.setDouble(2,business.getDeliveryPrice());
+            result=pstmt.executeUpdate();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return result;
+    }
+
+    @Override
+    public int updateBusinessByPassword(Integer businessId, String password) {
+        int result=0;
+        String sql="update business set password=? where businessId=?";
+        try {
+            conn=JDBCUtils.getConnection();
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setInt(1,businessId);
+            pstmt.setString(2,password);
+            result=pstmt.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return result;
+    }
+
+    @Override
+    public Business getBusinessById(Integer businessId) {
+        Business business=null;
+        String sql="select *from business where businessId=?";
+        try {
+            conn=JDBCUtils.getConnection();
+            pstmt=conn.prepareStatement(sql) ;
+            rs=pstmt.executeQuery();
+            while (rs.next()){
+                business=new Business();
+                business.setBusinessId(rs.getInt("businessId"));
+                business.setBusinessName(rs.getString("businessName"));
+                business.setBusinessExplain(rs.getString("businessExplain"));
+                business.setBusinessAddress(rs.getString("businessAddress"));
+                business.setStartPrice(rs.getDouble("starPrice"));
+                business.setDeliveryPrice(rs.getDouble("deliveryPrice"));
+                business.setPassword(rs.getString("password"));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt,conn,rs);
+        }
+        return business;
+    }
+
 }
